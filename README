@@ -185,27 +185,27 @@ class SeedHander(S4RequestHandler,RequestHandler):
 
 
 前端母版。{% include 'header.html' %} 局部导入
-layout.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <div style="height: 48px;background-color: olivedrab"></div>
-    {% block content %}{% end %}
-</body>
-</html>
+    layout.html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <div style="height: 48px;background-color: olivedrab"></div>
+        {% block content %}{% end %}
+    </body>
+    </html>
 
 引用
-{% extends "layout.html" %}
-{% block content %}
-    <h1>数据列表</h1>
-    <ul>
-        {% for item in seed_list %}
-            <!--<li>{{ item['title'] }}={{ item['price'] }}</li>-->
-            <li>{{ item.get('title') }}={{ item.get('price') }}</li>
-        {% end%}
-    </ul>
-{% end %}
+    {% extends "layout.html" %}
+    {% block content %}
+        <h1>数据列表</h1>
+        <ul>
+            {% for item in seed_list %}
+                <!--<li>{{ item['title'] }}={{ item['price'] }}</li>-->
+                <li>{{ item.get('title') }}={{ item.get('price') }}</li>
+            {% end%}
+        </ul>
+    {% end %}
