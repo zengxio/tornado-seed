@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ static_url('commmons.css') }}"/>
+</head>
+<body>
+    <h3 class="c1">登录</h3>
+    <form method="POST">
+        <!--{{ xsrf_form_html() }}-->
+        {% raw xsrf_form_html() %}
+        <input type="text" name="user" >
+        <input type="text" name="pwd" >
+        <input type="submit" value="提交">{{ msg }}
+    </form>
+
+</body>
+</html>

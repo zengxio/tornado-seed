@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>数据列表</h1>
+    <ul>
+        {% for item in seed_list %}
+            <!--<li>{{ item['title'] }}={{ item['price'] }}</li>-->
+            <li>{{ item.get('title') }}={{ item.get('price') }}</li>
+        {% end%}
+    </ul>
+{% end %}

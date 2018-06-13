@@ -1,0 +1,211 @@
+web框架总结:路由系统，视图函数，模版引擎，cookie，csrf，xss
+Tornado安装
+	pip3 install tornado
+基本使用
+	import tornado.ioloop
+	import tornado.web #tornado.web.RequestHandler引用
+	from tornado.web import RequestHandler
+
+
+	class IndexHandler(RequestHandler):
+		def get(self):
+			url1=self.application.reverse_url('t1')
+			url2=self.application.reverse_url('t2',666)
+			# application #self.application 代表application
+			print(url1,url2) #/test /test_path/666
+			self.write("Hello, world")
+
+	class DomainHandler(RequestHandler):
+		def get(self,nid): #接收参数 也可以改成*args,**kwargs接收多个参数
+			print(nid)
+			self.write('Hello oldman')
+		    def post(self, *args, **kwargs):
+				# print(self.get_body_argument('user')) #获取post数据
+				# print(self.get_body_arguments('user')) #获取post多个数据
+				# print(self.get_query_argument('id')) #获取get数据
+				# self.get_query_arguments('id') #获取get多个数据
+
+				user=self.get_argument('user')  #post和get都获取
+				pwd=self.get_argument('pwd')
+				if user=='alex' and pwd=='123':
+					import time
+					v=time.time()+10
+					# self.set_cookie('nnnnnn',user,expires=v) #设置为10秒钟后失效
+					self.set_secure_cookie('nnnnnn',user,expires=v)
+					#self.redirect('/seed.html')  #跳转
+					next_url=self.get_query_argument('next')
+					if not next_url:
+						next_url='/seed.html'
+					self.redirect(next_url)
+				else:
+					self.render('login.html',msg='用户名或密码错误') #渲染,render也可传字典加**即可
+
+	application = tornado.web.Application([
+		(r"/index", IndexHandler),
+		(r"/test", IndexHandler,{},"t1"),
+		(r"/test_path/(\d+)", DomainHandler,{},"t2"),
+		(r"/home/(\d+)", DomainHandler), #匹配正则表达式
+	])
+
+	# application.add_handlers('www.domain.com',[(r"/home/(\d+)", DomainHandler)])
+	# #优先匹配域名,如果匹配不上，在走默认的
+
+	if __name__ == "__main__":
+		application.listen(8888) #监听8888端口
+		tornado.ioloop.IOLoop.instance().start() #启动程序
+
+csrf 应用
+settings 配置'xsrf_cookiew':True,
+页面上加入{% raw xsrf_form_html() %}
+
+cookie应用
+	写入cookie
+	  # self.set_cookie('nnnnnn',user,expires=time.time()+10) #设置为10秒钟后失效
+	  self.set_secure_cookie('nnnnnn',user,expires=time.time()+10) #加密cookie
+	  加密的cookie，setting要配置'cookie_secret':'fjdklsajfowje'一个加密字符串
+	获取cookie
+	  # name=self.get_cookie('nnnnnn')
+	  name=self.get_secure_cookie('nnnnnn')
+
+#获取cookie的装饰器
+	from tornado.web import RequestHandler
+	from tornado.web import authenticated
+	class SeedHander(RequestHandler):
+		#访问 http://127.0.0.1:8888/seed.html 会变成以下url
+        #http://127.0.0.1:8888/login.html?next=%2Fseed.html
+		#自定制函数。需要在setting配置 'login_url':'/login.html'。否则在没有登录的情况下访问报错
+		def get_current_user(self):
+			return self.get_secure_cookie('nnnnnn')
+
+		@authenticated # self.current_user 这个装饰器本质就是预留了一个自定制获取cookie的方法。效果同下
+		def get(self, *args, **kwargs):
+
+			# name=self.get_secure_cookie('nnnnnn')
+
+			# if not name:
+			#     self.redirect('/login.html')
+			#     return None
+			self.write("欢迎登录")
+
+tornado 配置setting
+import tornado.ioloop
+import tornado.web
+from controllerrs.account import LoginHander
+from controllerrs.seed import SeedHander
+settings={
+    'template_path':'views',
+    'static_path':'ssssss',
+    'static_url_prefix':'/static/',
+    'xsrf_cookiew':True,
+    'cookie_secret':'fjdklsajfowje',
+    'login_url':'/login.html'
+}
+application = tornado.web.Application([
+    (r"/login.html", LoginHander),
+    (r"/seed.html", SeedHander),
+
+],**settings)
+
+
+if __name__ == "__main__":
+    application.listen(8888)
+    tornado.ioloop.IOLoop.instance().start()
+
+前端文件基于setting引入css文件
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ static_url('commmons.css') }}"/>
+	{# 避免static静态目录名称被修改 #}
+</head>
+<body>
+    <h3 class="c1">登录</h3>
+    <form method="POST">
+        <!--{{ xsrf_form_html() }}-->
+        {% raw xsrf_form_html() %}
+        <input type="text" name="user" >
+        <input type="text" name="pwd" >
+        <input type="submit" value="提交">{{ msg }}
+    </form>
+
+</body>
+</html>
+
+前端模板取值类似于python
+后台:
+  seed_list=[
+            {'title':'小麦','price':2},
+            {'title':'大麦','price':21},
+            {'title':'大桥','price':22},
+        ]
+        self.render('seed.html',seed_list=seed_list)
+
+前端:
+	{% for item in seed_list %}
+				<!--<li>{{ item['title'] }}={{ item['price'] }}</li>-->
+				<li>{{ item.get('title') }}={{ item.get('price') }}</li>
+	{% end%}
+
+
+单继承和多继承实现登录认证
+from tornado.web import RequestHandler
+from tornado.web import authenticated
+#单继承
+"""
+class S4RequestHandler(RequestHandler):
+    def get_current_user(self):
+        return self.get_secure_cookie('nnnnnn')
+class SeedHander(S4RequestHandler):
+    @authenticated
+    def get(self, *args, **kwargs):
+        seed_list=[
+            {'title':'小麦','price':2},
+            {'title':'大麦','price':21},
+            {'title':'大桥','price':22},
+        ]
+        self.render('seed.html',seed_list=seed_list)
+"""
+
+#多继承
+class S4RequestHandler(object):
+    def get_current_user(self):
+        return self.get_secure_cookie('nnnnnn')
+
+class SeedHander(S4RequestHandler,RequestHandler):
+    @authenticated
+    def get(self, *args, **kwargs):
+        seed_list=[
+            {'title':'小麦','price':2},
+            {'title':'大麦','price':21},
+            {'title':'大桥','price':22},
+        ]
+        self.render('seed.html',seed_list=seed_list)
+
+
+前端母版。{% include 'header.html' %} 局部导入
+layout.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div style="height: 48px;background-color: olivedrab"></div>
+    {% block content %}{% end %}
+</body>
+</html>
+
+引用
+{% extends "layout.html" %}
+{% block content %}
+    <h1>数据列表</h1>
+    <ul>
+        {% for item in seed_list %}
+            <!--<li>{{ item['title'] }}={{ item['price'] }}</li>-->
+            <li>{{ item.get('title') }}={{ item.get('price') }}</li>
+        {% end%}
+    </ul>
+{% end %}
