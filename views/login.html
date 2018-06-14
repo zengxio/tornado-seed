@@ -7,11 +7,12 @@
 </head>
 <body>
     <h3 class="c1">登录</h3>
-    <form method="POST">
+    <form method="POST" name="form" enctype="multipart/form-data"  >
         <!--{{ xsrf_form_html() }}-->
         {% raw xsrf_form_html() %}
         <input type="text" name="user" >
         <input type="text" name="pwd" >
+        <input name="fff" id="my_file"  type="file" />
         <input type="submit" value="提交">{{ msg }}
     </form>
 

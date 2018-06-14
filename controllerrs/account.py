@@ -21,7 +21,13 @@ class LoginHander(RequestHandler):
             v=time.time()+300
             # self.set_cookie('nnnnnn',user,expires=v) #设置为10秒钟后失效
             self.set_secure_cookie('nnnnnn',user,expires=v)
-            next_url=self.get_query_argument('next')
+            # file_metas=self.request.files["fff"]
+            file_metas=self.request.files['fff']
+            for meta in file_metas:
+                file_name=meta['filename']
+                with open(file_name, 'wb') as up:
+                    up.write(meta['body'])
+            next_url=self.get_query_argument('next','')
             if not next_url:
                 next_url='/seed.html'
             self.redirect(next_url)

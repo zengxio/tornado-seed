@@ -209,3 +209,410 @@ class SeedHander(S4RequestHandler,RequestHandler):
             {% end%}
         </ul>
     {% end %}
+
+
+自定制uimodule，uimethod
+nnn.py
+from tornado.web import UIModule
+from tornado import escape
+class Custom(UIModule):
+    def render(self, *args, **kwargs):
+        return "this is a test"
+
+    def css_files(self):
+        """自动会在前端引用css
+        <link href="/css/common.css" type="text/css" rel="stylesheet">
+        """
+        return ["/css/common.css",]
+
+    def embedded_css(self):
+        """嵌入css样式"""
+        tpl="""
+        .c2{
+            color:red
+        }
+        """
+        return tpl
+
+    def javascript_files(self):
+        """前端引用该地址的js
+        <script src="/js/aaa.js" type="text/javascript"></script>
+        """
+        return ['/js/aaa.js']
+
+    def embedded_javascript(self):
+        """嵌入js"""
+        tpl="""
+        v=123;
+        console.log(v)
+        """
+        return tpl
+
+mmm.py
+def tab(self):
+    return "<a href='http://www.baidu.com' >百度</a>"
+
+setting注册到tornado
+import mmm as mt
+import nnn as nt
+
+'ui_methods':mt,
+'ui_modules':nt
+
+#前端引用
+seed.html
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="c2">数据列表</h1>
+    <!--{{ tab() }} 执行函数 -->
+
+    {% raw tab() %}<!--ui_methods-->
+    {% module Custom(123) %} <!--ui_modules-->
+    <ul>
+        {% for item in seed_list %}
+            <!--<li>{{ item['title'] }}={{ item['price'] }}</li>-->
+            <li>{{ item.get('title') }}={{ item.get('price') }}</li>
+        {% end%}
+    </ul>
+{% end %}
+
+#form上传文件
+前端
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ static_url('commmons.css') }}"/>
+</head>
+<body>
+    <h3 class="c1">登录</h3>
+    <form method="POST" name="form" enctype="multipart/form-data"  >
+        <!--{{ xsrf_form_html() }}-->
+        {% raw xsrf_form_html() %}
+        <input type="text" name="user" >
+        <input type="text" name="pwd" >
+        <input name="fff" id="my_file"  type="file" />
+        <input type="submit" value="提交">{{ msg }}
+    </form>
+
+</body>
+</html>
+
+后台接收并写入文件
+def post(self, *args, **kwargs):
+	user=self.get_argument('user')  #post和get都获取
+	pwd=self.get_argument('pwd')
+	if user=='alex' and pwd=='123':
+		import time
+		v=time.time()+300
+		self.set_secure_cookie('nnnnnn',user,expires=v)
+		file_metas=self.request.files['fff'] #获取文件数据
+		for meta in file_metas:
+			file_name=meta['filename']  #获取文件名称
+			with open(file_name, 'wb') as up:
+				up.write(meta['body']) #写入文件
+		next_url=self.get_query_argument('next','')
+		if not next_url:
+			next_url='/seed.html'
+		self.redirect(next_url)
+	else:
+		self.render('login.html',msg='用户名或密码错误')
+
+基于ajax上传文件
+#XMLHttpRequest 方式
+前端
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <input type="file" id="img" />
+    <input type="button" onclick="UploadFile();" value="提交" />
+    <script>
+        function UploadFile(){
+            var fileObj = document.getElementById("img").files[0];
+
+            var form = new FormData();
+            form.append("k1", "v1");
+            form.append("fff", fileObj);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("post", '/test.html', true);
+            xhr.send(form);
+        }
+    </script>
+</body>
+</html>
+
+后台接收并写入文件
+test.py
+#!/usr/bin/env python
+#encoding:utf-8
+from tornado.web import RequestHandler
+class TestHander(RequestHandler):
+    def get(self,*args, **kwargs):
+        self.render('test.html')
+
+    def post(self, *args, **kwargs):
+        file_metas = self.request.files['fff']
+        for meta in file_metas:
+            file_name = meta['filename']
+            with open(file_name, 'wb') as up:
+                up.write(meta['body'])
+
+        self.write("ok") #ajax不可以直接跳转
+
+juery方式
+前端
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+
+    <input type="file" id="img" />
+    <input type="button" onclick="UploadFile();" value="提交" />
+	<!--引用jquery->
+    <script src="{{ static_url('js/jquery-1.12.4.js') }}"></script>
+    <script>
+        function UploadFile(){
+            var fileObj = $("#img")[0].files[0];
+            var form = new FormData();
+            form.append("k1", "v1");
+            form.append("fff", fileObj);
+
+            $.ajax({
+                type:'POST',
+                url: '/test.html',
+                data: form,
+                processData: false,  // tell jQuery not to process the data
+                contentType: false,  // tell jQuery not to set contentType
+                success: function(arg){
+                    console.log(arg);
+                }
+            })
+        }
+    </script>
+</body>
+</html>
+
+后台同上test.py
+
+iframe方式
+前端文件
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<form id="my_form" name="form" action="/test.html" method="POST"  enctype="multipart/form-data" >
+        <div id="main">
+            <input name="fff" id="my_file"  type="file" />
+            <input type="button" name="action" value="Upload" onclick="redirect()"/>
+            <iframe id='my_iframe' name='my_iframe' src=""  class="hide"></iframe>
+        </div>
+    </form>
+    <script src="{{ static_url('js/jquery-1.12.4.js') }}"></script>
+    <script>
+        function redirect(){
+            document.getElementById('my_iframe').onload = Testt;
+            document.getElementById('my_form').target = 'my_iframe';
+            document.getElementById('my_form').submit();
+
+        }
+
+        function Testt(ths){
+            var t = $("#my_iframe").contents().find("body").text();
+            console.log(t);
+        }
+    </script>
+</body>
+</html>
+
+后台同上test.py
+
+生成验证码,需要准备一种字体文件ttf结尾
+app.py
+    #!/usr/bin/env python
+    # -*- coding:utf-8 -*-
+
+    import tornado.ioloop
+    import tornado.web
+    import io
+    import check_code
+
+    class CheckCodeHandler(tornado.web.RequestHandler):
+        def get(self):
+            mstream = io.BytesIO()
+            img, code = check_code.create_validate_code()
+            img.save(mstream, "GIF")
+            # self.session["CheckCode"] = code
+            print(mstream.getvalue())
+            self.write(mstream.getvalue())
+
+    class MainHandler(tornado.web.RequestHandler):
+        def get(self):
+            self.render('index.html')
+
+    settings = {
+        'template_path': 'template',
+        'static_path': 'static',
+        'static_url_prefix': '/static/',
+        'cookie_secret': 'aiuasdhflashjdfoiuashdfiuh',
+    }
+
+    application = tornado.web.Application([
+        (r"/index", MainHandler),
+        (r"/check_code", CheckCodeHandler),
+    ], **settings)
+
+
+    if __name__ == "__main__":
+        application.listen(8888)
+        tornado.ioloop.IOLoop.instance().start()
+
+
+check_code.py
+#!/usr/bin/env python
+#coding:utf-8
+
+    import random
+    from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+    _letter_cases = "abcdefghjkmnpqrstuvwxy"  # 小写字母，去除可能干扰的i，l，o，z
+    _upper_cases = _letter_cases.upper()  # 大写字母
+    _numbers = ''.join(map(str, range(3, 10)))  # 数字
+    init_chars = ''.join((_letter_cases, _upper_cases, _numbers))
+
+    def create_validate_code(size=(120, 30),
+                             chars=init_chars,
+                             img_type="GIF",
+                             mode="RGB",
+                             bg_color=(255, 255, 255),
+                             fg_color=(0, 0, 255),
+                             font_size=18,
+                             font_type="Monaco.ttf",
+                             length=4,
+                             draw_lines=True,
+                             n_line=(1, 2),
+                             draw_points=True,
+                             point_chance = 2):
+        '''
+        @todo: 生成验证码图片
+        @param size: 图片的大小，格式（宽，高），默认为(120, 30)
+        @param chars: 允许的字符集合，格式字符串
+        @param img_type: 图片保存的格式，默认为GIF，可选的为GIF，JPEG，TIFF，PNG
+        @param mode: 图片模式，默认为RGB
+        @param bg_color: 背景颜色，默认为白色
+        @param fg_color: 前景色，验证码字符颜色，默认为蓝色#0000FF
+        @param font_size: 验证码字体大小
+        @param font_type: 验证码字体，默认为 ae_AlArabiya.ttf
+        @param length: 验证码字符个数
+        @param draw_lines: 是否划干扰线
+        @param n_lines: 干扰线的条数范围，格式元组，默认为(1, 2)，只有draw_lines为True时有效
+        @param draw_points: 是否画干扰点
+        @param point_chance: 干扰点出现的概率，大小范围[0, 100]
+        @return: [0]: PIL Image实例
+        @return: [1]: 验证码图片中的字符串
+        '''
+
+        width, height = size # 宽， 高
+        img = Image.new(mode, size, bg_color) # 创建图形
+        draw = ImageDraw.Draw(img) # 创建画笔
+
+        def get_chars():
+            '''生成给定长度的字符串，返回列表格式'''
+            return random.sample(chars, length)
+
+        def create_lines():
+            '''绘制干扰线'''
+            line_num = random.randint(*n_line) # 干扰线条数
+
+            for i in range(line_num):
+                # 起始点
+                begin = (random.randint(0, size[0]), random.randint(0, size[1]))
+                #结束点
+                end = (random.randint(0, size[0]), random.randint(0, size[1]))
+                draw.line([begin, end], fill=(0, 0, 0))
+
+        def create_points():
+            '''绘制干扰点'''
+            chance = min(100, max(0, int(point_chance))) # 大小限制在[0, 100]
+
+            for w in range(width):
+                for h in range(height):
+                    tmp = random.randint(0, 100)
+                    if tmp > 100 - chance:
+                        draw.point((w, h), fill=(0, 0, 0))
+
+        def create_strs():
+            '''绘制验证码字符'''
+            c_chars = get_chars()
+            strs = ' %s ' % ' '.join(c_chars) # 每个字符前后以空格隔开
+
+            font = ImageFont.truetype(font_type, font_size)
+            font_width, font_height = font.getsize(strs)
+
+            draw.text(((width - font_width) / 3, (height - font_height) / 3),
+                        strs, font=font, fill=fg_color)
+
+            return ''.join(c_chars)
+
+        if draw_lines:
+            create_lines()
+        if draw_points:
+            create_points()
+        strs = create_strs()
+
+        # 图形扭曲参数
+        params = [1 - float(random.randint(1, 2)) / 100,
+                  0,
+                  0,
+                  0,
+                  1 - float(random.randint(1, 10)) / 100,
+                  float(random.randint(1, 2)) / 500,
+                  0.001,
+                  float(random.randint(1, 2)) / 500
+                  ]
+        img = img.transform(size, Image.PERSPECTIVE, params) # 创建扭曲
+
+        img = img.filter(ImageFilter.EDGE_ENHANCE_MORE) # 滤镜，边界加强（阈值更大）
+
+        return img, strs
+
+template/index.html
+    <!DOCTYPE html>
+    <html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>hello</h1>
+        <form action="/index" method="post" enctype="multipart/form-data">
+            <p><input name="user" type="text" placeholder="用户名" /></p>
+            <p><input name="pwd" type="password" placeholder="密码" /></p>
+            <p>
+                <input name='code' type="text" placeholder="验证码" />
+                <img src="/check_code" onclick='ChangeCode();' id='imgCode'>
+            </p>
+            <input type="submit" />
+        </form>
+        <script type="text/javascript">
+
+            function ChangeCode() {
+                var code = document.getElementById('imgCode');
+                code.src += '?';
+            }
+        </script>
+    </body>
+    </html>
