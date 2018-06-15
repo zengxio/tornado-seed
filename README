@@ -616,3 +616,55 @@ template/index.html
         </script>
     </body>
     </html>
+
+#阶段3为定制session组件
+工厂模式
+    工厂类
+        读取配置文件，选择RedisSession/CacheSession
+
+cookie和session关系:处理随机字符串
+cookie是保存在浏览器的键值对
+session是保存在服务器端的键值对
+
+#阶段4为Form验证的组件
+#插件
+class TextInput:
+    def __init__(self,attrs)
+        pass
+
+    def __str__(self):
+       input标签生成
+
+#字段(插件和正则)
+class Field:
+    def __init(self):
+        self.widget #标签插件
+        self.regex  #正则表达式
+        self.value  #为插件提供value属性值
+        sekf,error
+        self.status
+
+    def field_valid(value):
+        self.regex
+
+#form(字段)
+class BaseForm():
+    def __init(self,)
+       self.cleaned_data={}
+       self.errors={}
+       self.fields={
+           user:CharField(),
+           email:EmailField(),
+       }
+
+    def is_valid():
+        for 字段 in 字段列表:
+            字段.field_valid()
+            if 字段.status:
+                self.clenaned_data[name]=字段.value
+            else:
+                self.errors[name]=字段.error
+        
+#使用者
+class LoginForm(BaseForm):
+    user=CharField()

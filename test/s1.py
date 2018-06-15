@@ -3,7 +3,11 @@
 import tornado.ioloop
 import tornado.web #tornado.web.RequestHandler引用
 from tornado.web import RequestHandler
-
+"""
+session和cookie的关系
+cookie: 浏览器上的键值对
+session: 保存在服务器端的键值对
+"""
 
 class IndexHandler(RequestHandler):
     def get(self):

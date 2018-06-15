@@ -23,6 +23,7 @@ class S4RequestHandler(object):
     def get_current_user(self):
         return self.get_secure_cookie('nnnnnn')
 
+
 class SeedHander(S4RequestHandler,RequestHandler):
     @authenticated
     def get(self, *args, **kwargs):

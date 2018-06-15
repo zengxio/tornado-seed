@@ -2,21 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2debd01d-cdac-4b9c-a1bc-8868e590366d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllerrs/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mmm.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nnn.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ssssss/js/jquery-1.12.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tornado_check_code/Monaco.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tornado_check_code/app.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tornado_check_code/check_code.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tornado_check_code/template/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段2/app.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段2/session_code.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段2/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段3/app.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段3/session_code.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段3/settings.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段3/test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段3/views/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/阶段4/s1.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllerrs/account.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllerrs/seed.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllerrs/test.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mmm.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/nnn.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ssssss/commmons.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ssssss/js/jquery-1.12.4.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/s1.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tornado_check_code/Monaco.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tornado_check_code/app.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tornado_check_code/check_code.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/tornado_check_code/template/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/layout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/seed.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/test.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllerrs/account.py" afterPath="$PROJECT_DIR$/controllerrs/account.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.html" afterPath="$PROJECT_DIR$/views/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/seed.html" afterPath="$PROJECT_DIR$/views/seed.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,29 +40,24 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/s4day125$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1528949325919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tornado_check_code" />
-    <SUITE FILE_PATH="coverage/s4day125$s1.coverage" NAME="s1 Coverage Results" MODIFIED="1528863792083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/s4day125$app.coverage" NAME="app Coverage Results" MODIFIED="1528948820916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/s4day125$s1.coverage" NAME="s1 Coverage Results" MODIFIED="1529034445574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/阶段4" />
+    <SUITE FILE_PATH="coverage/s4day125$app__3_.coverage" NAME="app (3) Coverage Results" MODIFIED="1529028073698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/阶段3" />
+    <SUITE FILE_PATH="coverage/s4day125$app__4_.coverage" NAME="app (4) Coverage Results" MODIFIED="1528961521072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/阶段2" />
+    <SUITE FILE_PATH="coverage/s4day125$test.coverage" NAME="test Coverage Results" MODIFIED="1528971573987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/阶段3" />
+    <SUITE FILE_PATH="coverage/s4day125$app__2_.coverage" NAME="app (2) Coverage Results" MODIFIED="1528959343855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/阶段二" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tornado_check_code/app.py">
+      <file leaf-file-name="s1.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/阶段4/s1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+            <state relative-caret-position="-486">
+              <caret line="65" column="63" lean-forward="false" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="63" />
               <folding>
-                <element signature="e#46#67#0" expanded="true" />
+                <element signature="e#52#61#0" expanded="true" />
+                <element signature="e#103#491#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="check_code.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tornado_check_code/check_code.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -57,18 +65,8 @@
       <file leaf-file-name="README" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="311" column="47" lean-forward="true" selection-start-line="311" selection-start-column="47" selection-end-line="311" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tornado_check_code/template/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+            <state relative-caret-position="-698">
+              <caret line="630" column="16" lean-forward="true" selection-start-line="630" selection-start-column="16" selection-end-line="630" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -94,16 +92,29 @@
         <option value="$PROJECT_DIR$/s1.py" />
         <option value="$PROJECT_DIR$/ssssss/commmons.css" />
         <option value="$PROJECT_DIR$/test1.py" />
-        <option value="$PROJECT_DIR$/controllerrs/seed.py" />
         <option value="$PROJECT_DIR$/views/layout.html" />
         <option value="$PROJECT_DIR$/mmm.py" />
         <option value="$PROJECT_DIR$/controllerrs/account.py" />
         <option value="$PROJECT_DIR$/views/login.html" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/nnn.py" />
         <option value="$PROJECT_DIR$/controllerrs/test.py" />
         <option value="$PROJECT_DIR$/views/seed.html" />
         <option value="$PROJECT_DIR$/views/test.html" />
+        <option value="$PROJECT_DIR$/阶段一/app.py" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/阶段二/session_code.py" />
+        <option value="$PROJECT_DIR$/阶段二/app.py" />
+        <option value="$PROJECT_DIR$/阶段二/settings.py" />
+        <option value="$PROJECT_DIR$/阶段2/session_code.py" />
+        <option value="$PROJECT_DIR$/阶段2/app.py" />
+        <option value="$PROJECT_DIR$/test/s1.py" />
+        <option value="$PROJECT_DIR$/controllerrs/seed.py" />
+        <option value="$PROJECT_DIR$/阶段3/views/login.html" />
+        <option value="$PROJECT_DIR$/阶段3/app.py" />
+        <option value="$PROJECT_DIR$/阶段3/test.py" />
+        <option value="$PROJECT_DIR$/阶段3/settings.py" />
+        <option value="$PROJECT_DIR$/阶段3/session_code.py" />
+        <option value="$PROJECT_DIR$/阶段4/s1.py" />
         <option value="$PROJECT_DIR$/README" />
       </list>
     </option>
@@ -122,10 +133,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="372" />
-    <option name="y" value="111" />
+    <option name="x" value="365" />
+    <option name="y" value="84" />
     <option name="width" value="1696" />
-    <option name="height" value="944" />
+    <option name="height" value="849" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -150,6 +161,16 @@
               <item name="s4day125" type="b2602c69:ProjectViewProjectNode" />
               <item name="s4day125" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="s4day125" type="b2602c69:ProjectViewProjectNode" />
+              <item name="s4day125" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="s4day125" type="b2602c69:ProjectViewProjectNode" />
+              <item name="s4day125" type="462c0819:PsiDirectoryNode" />
+              <item name="阶段2" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -165,13 +186,16 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\s4day125\阶段一" />
+      <recent name="E:\s4day125\static" />
+      <recent name="E:\s4day125\test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\s4day125\阶段3" />
       <recent name="E:\s4day125" />
       <recent name="E:\s4day125\views" />
       <recent name="E:\s4day125\ssssss\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\s4day125\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -186,39 +210,57 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app (1)">
-    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.s1">
+    <configuration name="app (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tornado_check_code" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/阶段二" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="s4day125" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tornado_check_code/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/阶段二/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="app (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/阶段3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="s4day125" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/阶段3/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="app (4)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/阶段2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="s4day125" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/阶段2/app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -230,27 +272,49 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/阶段4" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="s4day125" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="E:\s4day125\test\s1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/阶段4/s1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.s1" />
-      <item index="1" class="java.lang.String" itemvalue="Python.app" />
-      <item index="2" class="java.lang.String" itemvalue="Python.app (1)" />
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/阶段3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="s4day125" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/阶段3/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.app (2)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.app (3)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.app (4)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.s1" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.app (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.app" />
-        <item index="2" class="java.lang.String" itemvalue="Python.s1" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.s1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.app (3)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.app (4)" />
+        <item index="4" class="java.lang.String" itemvalue="Python.app (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -268,15 +332,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="372" y="111" width="1696" height="944" extended-state="0" />
+    <frame x="365" y="84" width="1696" height="849" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1393643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16419753" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06993007" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -298,15 +363,89 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/s1.py</url>
+          <line>2</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/阶段3/app.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/阶段4/s1.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/阶段3/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/session_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="33" column="68" lean-forward="false" selection-start-line="33" selection-start-column="67" selection-end-line="33" selection-end-column="68" />
+          <folding>
+            <element signature="e#38#52#0" expanded="true" />
+            <element signature="e#1517#2455#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_check_code/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_check_code/check_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5909">
+          <caret line="311" column="47" lean-forward="true" selection-start-line="311" selection-start-column="47" selection-end-line="311" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_check_code/template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -314,11 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
           <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-          <folding>
-            <element signature="e#38#76#0" expanded="true" />
-            <marker date="1528885448315" expanded="false" signature="163:243" ph="..." />
-            <marker date="1528885448315" expanded="false" signature="279:533" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -326,7 +460,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -334,9 +467,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -344,7 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -362,7 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="24" column="28" lean-forward="true" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -370,23 +498,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3819">
           <caret line="201" column="4" lean-forward="false" selection-start-line="201" selection-start-column="4" selection-end-line="211" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ssssss/commmons.css">
+    <entry file="file://$PROJECT_DIR$/static/commmons.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
           <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/Python/Lib/site-packages/tornado/web.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="422" column="36" lean-forward="false" selection-start-line="422" selection-start-column="32" selection-end-line="422" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -395,69 +513,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="13" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TIM图片20180605171146.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ssssss/js/jquery-1.12.4.js">
+    <entry file="file://$PROJECT_DIR$/TIM图片20180605171146.png" />
+    <entry file="file://$PROJECT_DIR$/static/js/jquery-1.12.4.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/jquery-1.12.4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllerrs/account.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="28" column="42" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="28" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TIM图片20180612104816.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllerrs/seed.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="38" />
-          <folding>
-            <element signature="e#38#76#0" expanded="true" />
-            <marker date="1528885448315" expanded="false" signature="163:243" ph="..." />
-            <marker date="1528885448315" expanded="false" signature="279:533" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/jquery-1.12.4.js" />
+    <entry file="file://$PROJECT_DIR$/TIM图片20180612104816.jpg" />
     <entry file="file://$PROJECT_DIR$/nnn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
           <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -465,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -473,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" column="9" lean-forward="false" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -481,23 +551,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tornado_check_code/.idea/.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_check_code/.idea/.name" />
     <entry file="file://$PROJECT_DIR$/views/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -505,17 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/s1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="e#38#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -523,41 +573,151 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tornado_check_code/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-          <folding>
-            <element signature="e#46#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tornado_check_code/check_code.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="311" column="47" lean-forward="true" selection-start-line="311" selection-start-column="47" selection-end-line="311" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tornado_check_code/template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="285">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_check_code/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tornado_check_code/check_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段2/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="27" column="26" lean-forward="true" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段2/session_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段2/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="10" lean-forward="true" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/s1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#38#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllerrs/seed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllerrs/account.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/views/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="44" lean-forward="false" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/Python/Lib/site-packages/tornado/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="1540" column="0" lean-forward="false" selection-start-line="1540" selection-start-column="0" selection-end-line="1540" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/session_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="e#38#52#0" expanded="true" />
+            <element signature="e#1517#2455#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段3/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="32" column="35" lean-forward="true" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <element signature="e#51#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-698">
+          <caret line="630" column="16" lean-forward="true" selection-start-line="630" selection-start-column="16" selection-end-line="630" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/阶段4/s1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="65" column="63" lean-forward="false" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="63" />
+          <folding>
+            <element signature="e#52#61#0" expanded="true" />
+            <element signature="e#103#491#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

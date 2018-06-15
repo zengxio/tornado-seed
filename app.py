@@ -9,7 +9,7 @@ import mmm as mt
 import nnn as nt
 settings={
     'template_path':'views',
-    'static_path':'ssssss',
+    'static_path':'static',
     'static_url_prefix':'/static/',
     'xsrf_cookiew':True,
     'cookie_secret':'fjdklsajfowje',
