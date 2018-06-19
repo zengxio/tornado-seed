@@ -668,3 +668,12 @@ class BaseForm():
 #使用者
 class LoginForm(BaseForm):
     user=CharField()
+
+#阶段5为封装的form组件，Tyrion
+1、自定制统一不同web框架取值的方式，首先注册
+import Tyrion
+Tyrion.setup('tornado')
+
+2、自定制完成生成不同的form表单标签
+
+3、完成输入值验证规则
