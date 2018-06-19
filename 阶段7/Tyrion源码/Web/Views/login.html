@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>基本验证</h1>
+    <hr/>
+
+    <form method="post" action="/login.html">
+        <div>
+            {% raw form.username %}
+            <span>{{form.error_dict.get('username',"")}}</span>
+        </div>
+        <div>
+            {% raw form.password %}
+            <span>{{form.error_dict.get('password',"")}}</span>
+        </div>
+        <div>
+            {% raw form.email %}
+            <span>{{form.error_dict.get('email',"")}}</span>
+        </div>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>动态初始值</h1>
+    <hr/>
+    <form method="post" action="/init_value.html">
+        <div>
+            {% raw form.username %}
+            <span>{{form.error_dict.get('username',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.age %}
+            <span>{{form.error_dict.get('age',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.city %}
+            <span>{{form.error_dict.get('city',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.gender %}
+            <span>{{form.error_dict.get('gender',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.protocol %} 协议
+            <span>{{form.error_dict.get('protocol',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.favor_int_val %}
+            <span>{{form.error_dict.get('favor_int_val',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.favor_str_val %}
+            <span>{{form.error_dict.get('favor_str_val',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.select_str_val %}
+            <span>{{form.error_dict.get('select_str_val',"")}}</span>
+        </div>
+        <hr/>
+        <div>
+            {% raw form.select_int_val %}
+            <span>{{form.error_dict.get('select_int_val',"")}}</span>
+        </div>
+
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>多选验证</h1>
+    <hr/>
+    <form method="post" action="/multi_checkbox.html">
+        <h3>无默认值（字符串值）</h3>
+        <div>
+            {% raw form.favor_str_val %}
+            <span>{{form.error_dict.get('favor_str_val',"")}}</span>
+        </div>
+        <hr/>
+        <h3>有默认值（字符串值）</h3>
+        <div>
+            {% raw form.favor_str_val_default %}
+            <span>{{form.error_dict.get('favor_str_val_default',"")}}</span>
+        </div>
+        <hr/>
+
+        <h3>无默认值（整数）</h3>
+        <div>
+            {% raw form.favor_int_val %}
+            <span>{{form.error_dict.get('favor_int_val',"")}}</span>
+        </div>
+        <hr/>
+        <h3>有默认值（整数）</h3>
+        <div>
+            {% raw form.favor_int_val_default %}
+            <span>{{form.error_dict.get('favor_int_val_default',"")}}</span>
+        </div>
+        <hr/>
+
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
